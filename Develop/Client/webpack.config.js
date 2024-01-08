@@ -33,7 +33,8 @@ module.exports = () => {
         short_name: 'Jate',
         description: 'Just another text editor',
         background_color: '#ffffff',
-        crossorigin: 'use-credentials', 
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
@@ -53,13 +54,15 @@ module.exports = () => {
         { 
           test: /\.js$/, 
           exclude: /node_modules/, 
+
+          use:{
           loader: "babel-loader",
           options: {
             presets: ['@babel/preset-env'],
             plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
           }
         },
-
+      }
       ],
     },
   };
