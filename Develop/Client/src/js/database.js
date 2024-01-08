@@ -19,7 +19,7 @@ const db = await dbPromise;
 const postTrans = db.transaction('jate', 'readwrite');
 const putStore = postTrans.objectStore('jate');
 await putStore.put({ id: 1, content: 'Hello!' });
-await tx.done;
+
 
 
 
@@ -31,6 +31,6 @@ const getTrans = database.transaction('jate', 'readonly');
 const getStore = getTrans.objectStore('jate');
 const content = await getStore.get(1);
 console.log(content);
-await tx.done;
+
 
 initdb();

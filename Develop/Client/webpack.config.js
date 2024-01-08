@@ -21,9 +21,8 @@ module.exports = () => {
     },
     plugins: [ 
       new HtmlWebpackPlugin({
-        template: './src/index.html',
-        filename: 'index.html',
-        chunks: ['main'],
+        template: './index.html',
+        title: 'Jate',
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
@@ -32,7 +31,7 @@ module.exports = () => {
       new WebpackPwaManifest({
         name: 'Jate',
         short_name: 'Jate',
-        description: 'A journaling app',
+        description: 'Just another text editor',
         background_color: '#ffffff',
         crossorigin: 'use-credentials', 
         icons: [
