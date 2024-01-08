@@ -26,8 +26,8 @@ console.log(result);
 
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
-const dbGet = openDB('jate', 1);
-const db = await dbGet;
+const dbGet = await openDB('jate', 1);
+const db = dbGet;
 const trans = db.transaction('jate', 'readonly');
 const store = trans.objectStore('jate');
 const request = await store.get(1);
