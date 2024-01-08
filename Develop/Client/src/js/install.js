@@ -17,8 +17,6 @@ butInstall.addEventListener('click', async () => {
         return;
     }
     promptEvent.prompt();
-    const result = await promptEvent.userChoice;
-    console.log(`userChoice ${result.outcome}`);
     window.defferedPrompt = null;
     butInstall.setAttribute('hidden', true);
 
