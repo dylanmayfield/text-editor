@@ -30,6 +30,20 @@ module.exports = () => {
         swSrc: './src-sw.js',
         swDest: 'sw.js',
       }),
+      new WebpackPwaManifest({
+        name: 'Jate',
+        short_name: 'Jate',
+        description: 'A journaling app',
+        background_color: '#ffffff',
+        crossorigin: 'use-credentials', 
+        icons: [
+          {
+            src: path.resolve('src/img/icon.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          }
+        ]
+      })
     ],
 
     module: {
@@ -43,7 +57,7 @@ module.exports = () => {
           exclude: /node_modules/, 
           loader: "babel-loader"
         },
-        
+
       ],
     },
   };
