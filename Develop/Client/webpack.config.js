@@ -27,7 +27,7 @@ module.exports = () => {
       }),
       new InjectManifest({
         swSrc: './src-sw.js',
-        swDest: 'sw.js',
+        swDest: 'src-sw.js',
       }),
       new WebpackPwaManifest({
         name: 'Jate',
@@ -37,7 +37,7 @@ module.exports = () => {
         crossorigin: 'use-credentials', 
         icons: [
           {
-            src: path.resolve('src/img/logo.png'),
+            src: path.resolve('src/images/logo.png'),
             sizes: [96, 128, 192, 256, 384, 512],
             destination: path.join('assets', 'icons'),
           }
@@ -54,7 +54,11 @@ module.exports = () => {
         { 
           test: /\.js$/, 
           exclude: /node_modules/, 
-          loader: "babel-loader"
+          loader: "babel-loader",
+          options: {
+            presets: ['@babel/preset-env'],
+            plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+          }
         },
 
       ],
