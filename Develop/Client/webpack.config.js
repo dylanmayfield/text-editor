@@ -20,13 +20,12 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [ 
-      new MiniCssExtractPlugin({ filename: '[name].css' }),
       new HtmlWebpackPlugin({
         template: './src/index.html',
         filename: 'index.html',
         chunks: ['main'],
       }),
-      new workboxPlugin.InjectManifest({
+      new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'sw.js',
       }),
