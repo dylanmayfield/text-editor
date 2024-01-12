@@ -6,7 +6,7 @@ Text editor is an app that runs in the browser. It is a single page application,
 
 ## Screenshots
 
-![jate-screenshot](<Develop/client/src/images/Screenshot 2024-01-11 at 10.25.15 PM (2).png>)
+![jate-screenshot](</client/src/images/Screenshot 2024-01-11 at 10.25.15 PM (2).png>)
 
 # Link to deployed application
 
