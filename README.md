@@ -10,3 +10,8 @@ Text editor is an app that runs in the browser. It is a single page application,
 
 # Link to deployed application
 
+https://text-editor-aov2.onrender.com/
+
+# Link to Github Repo
+
+https://github.com/dylanmayfield/text-editor
